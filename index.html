@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Links Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Viga&display=swap"
+      rel="stylesheet"
+    />
+    <!---Links CSS-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <!--Titulo-->
+    <title>Portafolios Daniel Miranda</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="#sobremi">Sobre Mi</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    
+    <div class="titulo">
+      <img
+        src="./img/323309359_642476764229019_747284910039032003_n.jpg"
+        alt="yo"
+      />
+      <h1>Bienvenidos a mi portafolios.</h1>
+      <h2>Mi nombre es Daniel Miranda.</h2>
+      <h3>Desarrollador Web</h3>
+      <div class="border"></div>
+    </div>
+    <div id="sobremi">
+      <section>
+        <h2>Sobre Mi</h2>
+        <br>
+        <p>¡Hola! Soy Daniel Alberto Miranda Oporto
+
+          Soy un desarrollador web en formación con una pasión por crear interfaces funcionales y atractivas. Actualmente estoy cursando mi primer año de programación en el Instituto Profesional San Sebastián, donde estoy profundizando mis conocimientos y habilidades en el campo del desarrollo web.
+          
+          A lo largo de mi trayectoria, he adquirido conocimientos sólidos en HTML, CSS y JavaScript, lo que me permite construir sitios web dinámicos y receptivos. Además, estoy expandiendo mis competencias en frameworks modernos como React y Angular, así como en Bootstrap para el diseño de interfaces elegantes y responsivas.
+          
+          Estoy siempre en busca de nuevos desafíos que me permitan aplicar lo que he aprendido y seguir creciendo en este emocionante campo. Mi portafolio refleja mi dedicación y mi deseo de convertir ideas en soluciones digitales efectivas.</p>
+      </section>
+      <div id="habilidades">
+        <h1>Mis Habilidades</h1>
+      </div>
+    <section class="skills-section">
+        <div class="skill-card">
+            <img src="./img/html css js.png" alt="HTML, CSS y JavaScript">
+            <h2>HTML, CSS y JavaScript</h2>
+            <p>Domino las tecnologías básicas para la creación de sitios web: HTML, CSS y JavaScript.</p>
+        </div>
+        <div class="skill-card">
+            <img src="./img/Bootstrap_logo.svg.png" alt="React, Angular y Bootstrap">
+            <h2>React, Angular y Bootstrap</h2>
+            <p>Ampliando mis horizontes con tecnologías modernas: React, Angular y Bootstrap.</p>
+        </div>
+        <div class="skill-card">
+            <img src="./img/pngtree-responsive-web-conceptual-illustration-design-png-image_705457.jpg" alt="Diseño Responsivo">
+            <h2>Diseño Responsivo</h2>
+            <p>Diseños responsivos para una experiencia de usuario óptima en cualquier dispositivo.</p>
+        </div>
+        <div class="skill-card">
+            <img src="./img/banner_paginaweb-1024x579.jpg" alt="Desarrollo Web en Proceso">
+            <h2>Desarrollo Web en Proceso</h2>
+            <p>Apasionado por el ciclo completo del desarrollo web.</p>
+        </div>
+    </section>
+    </div>
+    <section id="contacto">
+      <div class="contacto-container">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna pregunta o deseas trabajar conmigo, no dudes en enviarme un mensaje.</p>
+        <form action="https://formsubmit.co/danielmirandaoporto@gmail.com" method="POST" class="contacto-form">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+    
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required />
+    
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    
+          <button type="submit">Enviar</button>
+          <input type="hidden" name="_next" value="https://DanMirandaa.github.io/agradecimiento.html">
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; <span id="year"></span> Daniel Alberto Miranda Oporto. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script>// Obtener el botón de hamburguesa y el menú
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.menu ul');
+      
+      // Agregar un evento de clic al botón de hamburguesa
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active'); // Alternar la visibilidad del menú
+      });
+      
+      // Estilos adicionales para el menú activo
+      const css = `
+        .menu ul.active {
+          display: block;
+        }
+      `;
+      const style = document.createElement('style');
+      style.appendChild(document.createTextNode(css));
+      document.head.appendChild(style);
+      </script>
+  </body>
+</html>
